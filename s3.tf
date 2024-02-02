@@ -36,6 +36,7 @@ module "s3_bucket" {
     {
       "Sid": "bucket-delete-protection",
       "Action": [
+        "s3:DeleteBucketPolicy",
         "s3:DeleteBucket"
       ],
       "Effect": "Deny",
