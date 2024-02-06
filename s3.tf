@@ -12,7 +12,6 @@ module "s3_bucket" {
   object_lock_enabled = true
   control_object_ownership          = true
   object_ownership                  = "ObjectWriter"
-  attach_deny_incorrect_kms_key_sse = true
   allowed_kms_key_arn               = aws_kms_key.objects.arn
 
   server_side_encryption_configuration = {
