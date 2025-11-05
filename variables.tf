@@ -4,6 +4,12 @@ variable "name" {
   description = "Name of the resource"
 }
 
+variable "kms_encription" {
+  type        = bool
+  default     = false
+  description = "Enable KMS encryption"
+}
+
 # Other
 variable "tags" {
   type        = map(string)

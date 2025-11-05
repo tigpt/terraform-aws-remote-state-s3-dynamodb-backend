@@ -19,8 +19,8 @@ module "dynamodb_table" {
   deletion_protection_enabled    = true
   point_in_time_recovery_enabled = true
 
-  server_side_encryption_enabled     = true
-  server_side_encryption_kms_key_arn = aws_kms_key.dynamodb.arn
+  server_side_encryption_enabled     = var.kms_encription
+  server_side_encryption_kms_key_arn = var.kms_encription ? aws_kms_key.dynamodb[0].arn : null
 
   tags = merge(
     var.tags,
@@ -31,6 +31,7 @@ module "dynamodb_table" {
 }
 
 resource "aws_kms_key" "dynamodb" {
+  count                   = var.kms_encription ? 1 : 0
   description             = "KMS key is used to encrypt bucket objects"
   deletion_window_in_days = 7
 
