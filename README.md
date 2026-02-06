@@ -1,3 +1,8 @@
+# deprecated - replaced by [terraform-aws-remote-backend-s3](https://github.com/tigpt/terraform-aws-remote-backend-s3?tab=readme-ov-file)
+
+
+
+
 # terraform-aws-remote-state-s3-dynamodb-backend
 
 [![Releases](https://img.shields.io/github/v/release/tigpt/terraform-aws-remote-state-s3-dynamodb-backend)](https://github.com/tigpt/terraform-aws-remote-state-s3-dynamodb-backend/releases/latest)
